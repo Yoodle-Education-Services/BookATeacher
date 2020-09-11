@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Book A Teacher</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="stylesheet" type="text/css" href="public/stylesheets/bookstyle.css">
+        <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.toggle').click(function() {
+                    $('ul').toggleClass('active');
+                })
+            })
+        </script>
+    </head>
+    <body>
+      <div class="nav">
+        <header>
+            <a href="#" class="brand">Book A Teacher</a>
+            <a class="toggle">Menu</a>
+            <ul class="active">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Meet the Teacher</a></li>
+                <li><a href="#">New Teachers</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </header>
+    <div class="container">
+
+        <form action="" method="post">
+            <ul>
+             <li>
+               <label for="name">Name:</label>
+               <input type="text" id="name" name="full_name">
+             </li>
+             <li>
+               <label for="Specialty">Specialty:</label>
+               <input type="text" id="specialty" name="specialty">
+             </li>
+             <li>
+                <label for="email">E-mail:</label>
+                <input type="text" id="email" name="email">
+              </li>
+              <li>
+                <label for="phone">Phone:</label>
+                <input type="string" id="phone" name="phone">
+              </li>
+             <li>
+               <label for="bio">Biography:</label>
+               <textarea id="bio" name="bio"></textarea>
+             </li>
+             <input type="submit" value="Submit">
+            </ul>
+           </form>
+        </body>
