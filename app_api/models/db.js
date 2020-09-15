@@ -1,16 +1,9 @@
 const mongoose = require('mongoose');
 const dbURI = 'mongodb://localhost/BookATeacher';
-<<<<<<< HEAD
-mongoose.connect(dbURL, {useNewURLParser: true});
-
-mongoose.connection.on('connected', () => {
-    console.log(`Mongoose connected to ${dbURL}`);
-=======
 mongoose.connect(dbURI, {useNewURLParser: true});
 
 mongoose.connection.on('connected', () => {
     console.log(`Mongoose connected to ${dbURI}`);
->>>>>>> d1ff55f0560b73a5553901a4ab791bdec3463207
 });
 mongoose.connection.on('error', err => {
     console.log('Mongoose connection error:', err);
