@@ -1,6 +1,9 @@
 <html>
     <head>
         <title>Book A Teacher</title>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <link rel="stylesheet" type="text/css" href="public/stylesheets/bookstyle.css">
         <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500&display=swap" rel="stylesheet">
@@ -13,7 +16,7 @@
             })
         </script>
     </head>
-    <body>
+    <body> 
       <div class="nav">
         <header>
             <a href="#" class="brand">Book A Teacher</a>
@@ -26,31 +29,37 @@
                 <li><a href="#">About</a></li>
             </ul>
         </header>
-    <div class="container">
-
-        <form action="" method="post">
-            <ul>
-             <li>
-               <label for="name">Name:</label>
-               <input type="text" id="name" name="full_name">
-             </li>
-             <li>
-               <label for="Specialty">Specialty:</label>
-               <input type="text" id="specialty" name="specialty">
-             </li>
-             <li>
-                <label for="email">E-mail:</label>
-                <input type="text" id="email" name="email">
-              </li>
-              <li>
-                <label for="phone">Phone:</label>
-                <input type="string" id="phone" name="phone">
-              </li>
-             <li>
-               <label for="bio">Biography:</label>
-               <textarea id="bio" name="bio"></textarea>
-             </li>
-             <input type="submit" value="Submit">
-            </ul>
-           </form>
-        </body>
+      </div>
+      <form action="" class="container" method="post">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter Full Name">
+          </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" id="email" placeholder="Enter Email Address">
+          </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="string" class="form-control" id="phone" placeholder="Enter Preferred Number">
+          </div>
+        <div class="form-group">
+            <label for="preferredContactMethod">Preferred Contact Method</label>
+            <input type="text" class="form-control" id="preferredContactMethod" placeholder="Phone or Email">
+          </div>
+        <div class="form-group">
+            <label for="specialties">Specialties</label>
+            <input type="text" class="form-control" id="specialties" placeholder="Enter Subject Specialty">
+          </div>
+        <div class="form-group">
+            <label for="payRate">Desired Pay Rate</label>
+            <input type="string" class="form-control" id="payRate" placeholder="Enter Pay Rate">
+          </div>
+        <div class="form-group">
+            <label for="bioText">Bio</label>
+             <textarea class="form-control" id="bioText" rows="3"></textarea>
+          </div>
+          <div class= "form-group">Simple Button
+          <div>
+      </form>
+    </body>
