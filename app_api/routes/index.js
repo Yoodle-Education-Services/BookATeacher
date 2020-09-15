@@ -1,7 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const ctrlTeachers = require('../controllers/teachers');
+<<<<<<< HEAD
 //const ctrlTeacher = require('../controllers/teacherinput');
+=======
+>>>>>>> d1ff55f0560b73a5553901a4ab791bdec3463207
 const crtlCalendar = require('../controllers/calendar');
 const ctrlReviews =require('../controllers/reviews');
 
@@ -17,10 +20,13 @@ router
     .put(ctrlTeachers.teachersUpdateOne)
     .delete(ctrlTeachers.teachersDeleteOne);
 
+<<<<<<< HEAD
 
 //var teachers = require('./controllers/teacherinput.js'); 
 //app.use('/teachers', teacherinput);  
 
+=======
+>>>>>>> d1ff55f0560b73a5553901a4ab791bdec3463207
 //calendar
 router
     .route('/teachers/:teacherid/calendar')
