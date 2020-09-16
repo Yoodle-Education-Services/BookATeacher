@@ -7,8 +7,7 @@ const ctrlReviews =require('../controllers/reviews');
 //teachers
 router
     .route('/teachers')
-    .get(ctrlTeachers.teacherInfo)
-    .post(ctrlTeachers.teachersCreate);
+    .post(ctrlTeachers.teachersCreate); 
 
 router
     .route('/teachers/:teacherid')
@@ -17,15 +16,15 @@ router
     .delete(ctrlTeachers.teachersDeleteOne);
 
 //calendar
-router
+/*router
     .route('/teachers/:teacherid/calendar')
-    .get(crtlCalendar.calendarCreate);
+    .post(crtlCalendar.calendarCreate);
 
 router
     .route('/teachers/:teacherid:/calendar/:calendarid')
     .get(crtlCalendar.calendarReadOne)
     .put(crtlCalendar.calendarUpdateOne)
-    .delete(crtlCalendar.calendarDeleteOne);
+    .delete(crtlCalendar.calendarDeleteOne);*/
 
 //reviews
 router
