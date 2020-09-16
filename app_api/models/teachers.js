@@ -18,7 +18,7 @@ const calendarSchema = new mongoose.Schema ({
         required: true
     },
     subject: String
-}),
+});
 
 const reviewSchema = new mongoose.Schema({
     author: String,

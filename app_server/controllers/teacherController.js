@@ -20,7 +20,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.post('/', (req, res) => {
+router.post('/newTeachers', (req, res) => {
     var emp = new Teacher({
         name: req.body.name,
         email: req.body.email,
