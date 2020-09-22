@@ -6,7 +6,7 @@ if (process.env.NODE_ENV === 'production') {
 mongoose.connect(dbURL, {useNewURLParser: true});  
 
 mongoose.connection.on('connected', () => {
-    console.log(`Mongoose connected to ${dbURL}`); 
+    console.log(`Mongoose connected to ${dbURL}`);  
 });
 mongoose.connection.on('error', err => {
     console.log('Mongoose connection error:', err);

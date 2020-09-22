@@ -1,11 +1,11 @@
 <div class="container">
-    <div class="card" ngFor="let teacher of teachers">
+    <div class="card" *ngFor="let teacher of teachers">
         <div class="imgBox">
             <a href="/teachers/5f5d2eb7eede026498a7ab58"><img src="../../assets/images/etty-fidele-VNYCIbZju0o-unsplash.jpg"></a> 
         </div>
         <div class="details">
             <div class="content">
-                <h2>Bobby Johnson<br><span>English Teacher</span></h2>  
+                <h2>{{teacher.name}}<br><span>English Teacher</span></h2>  
                 <br>
                <small> 
                 <i class="fas fa-thumbs-up"></i>&nbsp;
