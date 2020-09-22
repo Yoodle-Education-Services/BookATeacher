@@ -7,13 +7,16 @@ import { TeacherListComponent } from './teacher-list/teacher-list.component';
 import { FrameworkComponent } from './framework/framework.component';
 import { AboutComponent } from './about/about.component';
 import { ResourcesComponent } from './resources/resources.component';
+import { ScheduleModule, RecurrenceEditorModule } from '@syncfusion/ej2-angular-schedule';
+import { CalendarComponent } from './calendar/calendar.component';
 
 @NgModule({
   declarations: [
     TeacherListComponent,
     FrameworkComponent,
     AboutComponent,
-    ResourcesComponent
+    ResourcesComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
@@ -24,15 +27,24 @@ import { ResourcesComponent } from './resources/resources.component';
         component: TeacherListComponent
       },
       {
-        path: 'meetTheTeachers',
+        path: 'teachers',
         component: TeacherListComponent
+      }, 
+      {
+        path:'calendar',
+        component: CalendarComponent
+      },
+      {
+        path:'resources',
+        component: ResourcesComponent
       },
       {
         path: 'about',
         component: AboutComponent
       }
 
-    ])
+    ]),
+    ScheduleModule, RecurrenceEditorModule
   ],
   providers: [],
   bootstrap: [FrameworkComponent]

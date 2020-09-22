@@ -10,7 +10,7 @@ export class TeacherDataService {
 
   constructor(private http: HttpClient) { }
 
-  private apiBaseUrl = 'http://localhost:4200/api';
+  private apiBaseUrl = 'http://localhost:3000/api';
 
   public getTeachers(): Promise<Teacher[]> {
     const url: string = `${this.apiBaseUrl}/teachers`;
