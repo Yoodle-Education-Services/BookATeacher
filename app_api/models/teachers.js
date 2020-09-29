@@ -53,9 +53,9 @@ const teacherSchema = new mongoose.Schema({
         min: 0,
         max: 5
     },
-    /*imageURL: String,
+    imageURL: String,
 
-    calendar: [calendarSchema],*/
+    /*calendar: [calendarSchema],*/
     reviews: [reviewSchema]
 });
 

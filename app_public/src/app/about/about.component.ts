@@ -16,7 +16,7 @@ export class AboutComponent implements OnInit {
     header : {
       title : 'About Book A Teacher'   
     },
-    content : 'Aliqua consequat ut velit in nostrud commodo. In sit incididunt in labore mollit sunt dolore ullamco cillum commodo sunt cillum. Irure pariatur sunt voluptate aliquip ut nulla. Aliqua in veniam sint consequat velit veniam ut ut laboris. Est magna excepteur cillum velit velit consectetur aliquip magna irure pariatur dolor dolor eu sit. Tempor pariatur nostrud do pariatur exercitation duis consequat amet consequat. Commodo anim irure officia laboris occaecat sit aute amet fugiat anim deserunt duis'
+    content : 'Book A Teacher aims to solve the problem of students not having access to daily in-person instruction. With Book A Teacher, parents will be able to connect and request services from qualified educators. Book A Teacher is available to teachers who are out of a job due to the pandemic or to teachers who want to earn extra cash. These teachers can find work on their own time and at their own rate.' 
   };
 
 }

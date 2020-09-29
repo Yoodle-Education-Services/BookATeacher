@@ -1,49 +1,69 @@
 <div class="container">
-    <div class="card">
+    <div class="card" *ngFor="let teacher of teachers">
         <div class="imgBox">
-            <img src="/app_public/src/assets/images/etty-fidele-VNYCIbZju0o-unsplash.jpg"> 
+            <a href="/teachers/5f5d2eb7eede026498a7ab58"><img src="../../assets/images/etty-fidele-VNYCIbZju0o-unsplash.jpg"></a> 
         </div>
         <div class="details">
             <div class="content">
-                <h2>Bobby Johnson<br><span>English Teacher</span></h2>
-                <ul>
-                   <li><a href="#">In</a></li> 
-                   <li><a href="#">Fb</a></li>
-                   <li><a href="#">YT</a></li> 
-                </ul>
+                <h2>{{teacher.name}}<br><span>English Teacher</span></h2>  
+                <br>
+               <small> 
+                <i class="fas fa-thumbs-up"></i>&nbsp;
+                <i class="fas fa-thumbs-up"></i>&nbsp;
+                <i class="fas fa-thumbs-up"></i>&nbsp;
+                <i class="fas fa-thumbs-up"></i>&nbsp;
+                <i class="fas fa-thumbs-up"></i>
+               </small>
+
+               <br>
                 <a href="#">Read More</a>
             </div>
         </div>
     </div>
     <div class="card">
         <div class="imgBox">
-            <img src="/app_public/src/assets/images/christina-wocintechchat-com-c-mgSuxqpzA-unsplash.jpg">
+            <img src="../../assets/images/christina-wocintechchat-com-c-mgSuxqpzA-unsplash.jpg"> 
         </div>
         <div class="details">
             <div class="content">
                 <h2>Chrissy Kim<br><span>History Teacher</span></h2>
-                <ul>
-                   <li><a href="#">In</a></li> 
-                   <li><a href="#">Fb</a></li>
-                   <li><a href="#">YT</a></li> 
-                </ul>
+
+                <!--<br>
+                <span class="badge badge-pill" style="background-color: brown">High School</span> 
+                <span class="badge badge-pill" style="background-color: brown">High School</span>
+                <span class="badge badge-pill" style="background-color: brown">High School</span>
+                <span class="badge badge-pill" style="background-color: brown">High School</span>
+                <br>-->
+                <small> 
+                 <i class="fas fa-thumbs-up"></i>&nbsp;
+                 <i class="fas fa-thumbs-up"></i>&nbsp;
+                 <i class="fas fa-thumbs-up"></i>&nbsp;
+                 <i class="fas fa-thumbs-up"></i>&nbsp;
+                 <i class="fas fa-thumbs-up"></i> 
+                </small>
+ 
+                <br>
                 <a href="#">Read More</a>
             </div>
         </div>
     </div>
-
     <div class="card">
         <div class="imgBox">
-            <img src="/src/assets/images/eye-for-ebony-aZzXKGcyWqk-unsplash (1).jpg"> 
+            <img src="../../assets/images/eye-for-ebony-aZzXKGcyWqk-unsplash (1).jpg"> 
         </div>
         <div class="details">
             <div class="content">
                 <h2>Victoria Brown<br><span>French Teacher</span></h2>
-                <ul>
-                   <li><a href="#">In</a></li> 
-                   <li><a href="#">Fb</a></li>
-                   <li><a href="#">YT</a></li> 
-                </ul>
+                <br>
+               <small> 
+                <i class="fas fa-thumbs-up"></i>&nbsp;
+                <i class="fas fa-thumbs-up"></i>&nbsp;
+                <i class="fas fa-thumbs-up"></i>&nbsp;
+                <i class="fas fa-thumbs-up"></i>&nbsp;
+                <i class="fas fa-thumbs-up"></i>
+               </small>
+
+               <br>
                 <a href="#">Read More</a>
             </div>
         </div>
@@ -51,16 +71,21 @@
 
     <div class="card">
         <div class="imgBox">
-            <img src="/app_public/src/assets/images/sergio-de-paula-c_GmwfHBDzk-unsplash (1).jpg"> 
+            <img src="../../assets/images/sergio-de-paula-c_GmwfHBDzk-unsplash (1).jpg"> 
         </div>
         <div class="details">
             <div class="content">
                 <h2>Jesus Lopez<br><span>Geometry Teacher</span></h2>
-                <ul>
-                   <li><a href="#">In</a></li> 
-                   <li><a href="#">Fb</a></li>
-                   <li><a href="#">YT</a></li> 
-                </ul>
+                <br>
+                <small> 
+                 <i class="fas fa-thumbs-up"></i>&nbsp;
+                 <i class="fas fa-thumbs-up"></i>&nbsp;
+                 <i class="fas fa-thumbs-up"></i>&nbsp;
+                 <i class="fas fa-thumbs-up"></i>&nbsp;
+                 <i class="fas fa-thumbs-up"></i>
+                </small>
+ 
+                <br>
                 <a href="#">Read More</a>
             </div>
         </div>

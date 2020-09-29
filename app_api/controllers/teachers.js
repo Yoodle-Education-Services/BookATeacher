@@ -2,25 +2,38 @@ const mongoose = require('mongoose');
 const Tea = mongoose.model('Teacher');
 
 
-/*const teacherInfo = (req, res) => {
-    Tea ({
-        name: req.body.name,
-        payRate: req.body.payRate,
-        bioText: req.body.bioText,
-        specialities: req.body.specialities.split(","),
-    });
+const teacherInfo = (req, res) => {  //need to find a REST API to req, res in alphabetical order if possible//
+    try{
+      Tea.find({}).exec(
+        (err, teacherResults) => {
+          console.log('entered result list', teacherResults);
+          const results = teacherResults.map(result => {
+            return {
+              name: result.name,
+              payRate: result.payRate,
+              rating: result.rating,
+              bioText: result.bioText,
+              specialities: result.specialities
 
-}; (err, teacher) => {
-    if(err) {
-        res
-            .status(400)
-            .json(err);
-    } else {
-        res 
-            .status(201)
-            .json(teacher);
-    }
-}*/
+              
+            
+            }
+          });
+          res
+            .status(200)
+            .json(results);
+        }
+      );
+    
+    } catch (err) {
+      console.log('500');
+      console.log(err);
+    res
+      .status(500)
+      .json(err);
+  }
+    };
+  
     
 
 const teachersCreate = (req, res) => { 
@@ -138,6 +151,7 @@ const teachersDeleteOne = (req, res) => {
 };
 
 module.exports = {
+    teacherInfo,
     teachersCreate,
     teachersReadOne,
     teachersUpdateOne,

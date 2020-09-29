@@ -109,7 +109,7 @@ ul li a:hover {
 
 
 .text {
-  padding: 150px 100px 100px;
+  padding: 80px 80px 80px;
   box-sizing: border-box;
 }
 .text h1 {
@@ -128,28 +128,6 @@ ul li a:hover {
   font-size: 1.05em;
 }
 
-/*section {
-  padding: 150px 100px 100px;
-  padding: 100px;
-  margin: 100px;
-  box-sizing: border-box;
-}
-
-section h1 {
-  margin: 0;
-  padding: 0;
-  font-size: 3em;
-}
-
- section h1 span {
-  font-size: 0.8em;
-  color: #328776;
-}
-
- section p {
-  color: black;
-  font-size: 1.05em;
-}*/
 
 body {
   margin: 0;
@@ -157,7 +135,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 105vh; 
   background: #D1EBE4;
   font-family: "Spartan", sans-serif;
 }
@@ -167,6 +145,7 @@ body {
   min-height: 600px;
   display: flex;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .card {
@@ -238,17 +217,9 @@ body {
   border: none;
 }
 
-.card .details .content ul li:nth-child(1) a {
-  background: royalblue;
-}
-
-.card .details .content ul li:nth-child(2) a {
-  background: blue;
-}
-
-.card .details .content ul li:nth-child(3) a {
-  background: red;
-}
+/*.fas {
+  color: greenyellow; 
+}*/
 
 .card .details .content a {
   display: inline-block;
@@ -300,5 +271,41 @@ body {
     width: calc(100% - 40px);
     margin: 10px auto;
   }
+}*/
+
+#contents{
+  margin-top: 90px; 
+} 
+
+#about-us .carousel-indicators {
+  position: static;
+  padding-top: 30px;
 }
+#about-us .carousel-indicators li {
+  background-color: #000;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+.carousel-control-prev-icon{
+  background-image: url(../images/left-arrow-pngrepo-com.png);  
+  padding: 25px;
+}
+
+.carousel-control-next-icon{
+  background-image: url(../images/right-arrow-pngrepo-com.png);  
+  padding: 25px;
+}
+
+#about-us .carousel-control-next {
+  right: -85px;
+}
+
+#about-us .carousel-control-prev {
+  left: -85px;
+}
+
+
 /*# sourceMappingURL=bookstyle.css.map */

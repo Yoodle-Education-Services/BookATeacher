@@ -7,7 +7,7 @@ const ctrlReviews =require('../controllers/reviews');
 //teachers
 router
     .route('/teachers')
- //   .get(ctrlTeachers.teacherInfo)
+    .get(ctrlTeachers.teacherInfo)
     .post(ctrlTeachers.teachersCreate);
 
 router
