@@ -20,11 +20,12 @@
     "@angular/platform-browser-dynamic": "~10.0.6",
     "@angular/router": "~10.0.6",
     "@syncfusion/ej2-angular-schedule": "^18.2.57",
+    "@syncfusion/ej2-material-theme": "~18.2.55",
     "angular-calendar": "^0.28.16",
+    "bulma": "^0.9.1",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
-    "zone.js": "~0.10.3",
-    "@syncfusion/ej2-material-theme": "~18.2.55"
+    "zone.js": "~0.10.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1000.5",

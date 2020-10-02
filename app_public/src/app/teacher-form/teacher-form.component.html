@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Form Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
+</head>
+
+<body>
+    <div style="margin-top:10ex" class="container">
+        <h1>Join the Platform</h1>
+        <div class="container">
+            <div class="row">
+                <div class='col-md-12'>
+                    <form #teacherForm="ngForm">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input #nameField type="text" class="form-control" ngModel>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input #emailField="ngModel" type="text" class="form-control" ngModel>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input #phoneField="ngModel" type="text" class="form-control" ngModel>
+                        </div>
+                        <div class="form-group">
+                            <label for="preferredContact">Contact Method</label>
+                            <input #preferredContactField="ngModel" type="text" class="form-control" ngModel>
+                        </div>
+                        <div class="form-group">
+                            <label for="specialties">Specialties</label>
+                            <input #specialtiesField="ngModel" type="text" class="form-control" ngModel>
+                        </div>
+                        <div class="form-group">
+                            <label for="payRate">Pay Rate</label>
+                            <input #payRateField="ngModel" type="text" class="form-control" ngModel>
+                        </div>
+                        <div class="form-group">
+                            <label for="Bio">Bio</label>
+                            <textarea id="comment" cols="30" rows="10" class="form-control"></textarea>
+                        </div>
+                        <button class="btn btn-primary" [disabled]="!teacherForm.valid">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

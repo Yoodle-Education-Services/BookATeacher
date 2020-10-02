@@ -148,5 +148,8 @@
       }
     }
   },
-  "defaultProject": "BookATeacher-public"
+  "defaultProject": "BookATeacher-public",
+  "cli": {
+    "analytics": false
+  }
 }
