@@ -13,7 +13,8 @@ const teacherInfo = (req, res) => {  //need to find a REST API to req, res in al
               payRate: result.payRate,
               rating: result.rating,
               bioText: result.bioText,
-              specialities: result.specialities
+              specialities: result.specialities,
+              imageURL: result.imageURL
 
               
             
@@ -43,6 +44,7 @@ const teachersCreate = (req, res) => {
         payRate: req.body.payRate,
         bioText: req.body.bioText,
         specialities: req.body.specialities.split(","),
+        imageURL: req.body.imageURL
     
     }, (err, teacher) => {
         if (err) {
@@ -109,6 +111,7 @@ const teachersUpdateOne = (req, res) => {
             teacher.payRate = req.body.payRate;
             teacher.bioText = req.body.bioText;
             teacher.specialities = req.body.specialities.split(',');
+            teacher.imageURL = req.body.imageURL
 
             teacher.save((err, tea) => {
                 if (err) {
@@ -140,7 +143,7 @@ const teachersDeleteOne = (req, res) => {
                     .status(204)
                     .json(null);
             }
-        );
+        ); 
     } else {
         res
             .status(404)

@@ -1,24 +1,22 @@
 const mongoose = require('mongoose');
 
-/*const calendarSchema = new mongoose.Schema ({
-    studentName: {
+const calendarSchema = new mongoose.Schema ({
+    //Id: Number,
+    subject: {
         type: String,
         required: true
     },
-    teacherName: {
-        type: String,
-        required: true
-    },
-    date: {
+    location: String,
+    startTime: {
         type: Date,
-        required: true,
-    },
-    time: {
-        type: Number,
         required: true
     },
-    subject: String
-}); */
+    endTime: {
+        type: Date,
+        required: true
+    }
+
+}); 
 
 const reviewSchema = new mongoose.Schema({
     author: String,
@@ -55,7 +53,8 @@ const teacherSchema = new mongoose.Schema({
     },
     imageURL: String,
 
-    /*calendar: [calendarSchema],*/
+    calendar: [calendarSchema],
+
     reviews: [reviewSchema]
 });
 

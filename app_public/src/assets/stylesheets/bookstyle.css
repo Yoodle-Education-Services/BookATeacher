@@ -145,14 +145,14 @@ body {
   min-height: 600px;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .card {
   position: relative;
   width: calc(50% - 20px);
   min-height: 300px;
-  background: white;
+  background: rgba(255, 255, 255, .7);
   margin: 10px;  
   box-sizing: border-box;
 }
@@ -235,6 +235,21 @@ body {
   background: black;
   color: #D1EBE4;
 }
+.card-block span {
+  margin: 5px;
+  padding: 8.5px;
+}
+
+.color button{
+  background-color: #20A289;
+  color: whitesmoke;
+}
+
+.colors button {
+  background-color: #20A289;
+  color: whitesmoke;
+}
+
 
 /*@media (max-width: 1200px) {
   .container {
@@ -274,7 +289,7 @@ body {
 }*/
 
 #contents{
-  margin-top: 90px; 
+  margin-top: 50px;  
 } 
 
 #about-us .carousel-indicators {
@@ -307,5 +322,10 @@ body {
   left: -85px;
 }
 
-
+.rowbanner {
+  padding-top: 70px;
+}
+.rowbanner h1 {
+  font-weight: 600;
+}
 /*# sourceMappingURL=bookstyle.css.map */

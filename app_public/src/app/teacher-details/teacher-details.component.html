@@ -1,0 +1,101 @@
+<div class="container">
+  <div class="mx-auto">
+    <app-rating-thumbs [rating]="teacher.rating"></app-rating-thumbs>
+  </div>
+  <div class="card col-12 shadow p-3 mb-5 bg-white rounded" style="height: 600px"> 
+    <div class="row">
+      <div class="col-md-4">
+        <img src="{{teacher.imageURL}}" class="img-fluid pt-4"> 
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h4 class="card-title">{{teacher.name}}'s Bio</h4>
+          <p class="card-text">{{teacher.bioText}}</p>
+          <div class="card-block">
+            <h4 class="card-title">Specialities</h4>
+            <span *ngFor="let specialities of teacher.specialities" class="badge" style="background-color: #D3EAE4">{{specialities}}</span>
+          </div>
+        </div> 
+      </div>
+      <div class="col-12">
+        <div class="card-block review-card">
+          <div class="color">
+          <button (click)="formVisible=true" type="button" class="btn float-right" data-toggle="modal" data-target="#exampleModal">Add Review</button>
+          </div>
+          <h4 class="card-title">Reviews for {{teacher.name}}</h4>
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4>Add your review</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div *ngIf="formVisible">
+                  <form (ngSubmit)="onReviewSubmit()">
+                    <div *ngIf="formError" class="alert alert-danger" role="alert"> {{ formError }}</div>
+                    <div class="form-group-row">
+                      <label for="name" class="col-sm-2 col-form-label">Name</label>
+                      <div class="col-sm-10">
+                        <input [(ngModel)]="newReview.author" id="name" name="name" required="required"
+                          class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group-row">
+                      <label for="rating" class="col-sm-2 col-form-label">Rating</label>
+                      <div class="col-sm-10 col-md-2">
+                        <select [(ngModel)]="newReview.rating" id="rating" name="rating" class="form-control">
+                          <option [ngvalue]="5">5</option>
+                          <option [ngvalue]="4">4</option>
+                          <option [ngvalue]="3">3</option>
+                          <option [ngvalue]="2">2</option>
+                          <option [ngvalue]="1">1</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group-row">
+                      <label for="review" class="col-sm-2 col-form-label">Review</label>
+                      <div class="col-sm-10">
+                        <textarea [(ngModel)]="newReview.reviewText" name="review" id="review" rows="5"
+                          class="form-control"></textarea>
+                      </div>
+                    </div>
+                    <div class="form-group-row pt-3">
+                      <div class="col-12">
+                        <div class="colors">
+                        <button type="submit" class="btn float-right" style="margin-left: 15px">Submit
+                          Review</button>
+                          </div>
+                        <button type="button" (click)="formVisible=false" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </form>
+                  </div>
+                </div>
+              </div>
+              <!--<div class="modal-footer">
+                <button type="button" (click)="formVisible=false" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngFor="let review of teacher.reviews | mostRecentFirst" class="row review">
+        <div class="col-12 no-gutters review-header">
+          &nbsp; &nbsp; <app-rating-thumbs [rating]="review.rating"></app-rating-thumbs>&nbsp;
+          <span class="reviewAuthor">{{ review.author }}</span>&nbsp;
+          <small class="reviewTimestamp">{{ review.createdOn | date : 'MMMM d yyyy' }}</small>
+        </div>
+        <div class="col-10">
+          <p [innerHTML]="review.reviewText | htmlLineBreaks"></p>
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto">  
+      <a routerLink="/teachers/{{teacher._id}}/calendar"><button type="button" class="btn btn-danger btn-lg">Book Now</button></a> 
+    </div>
+  </div>
+</div>

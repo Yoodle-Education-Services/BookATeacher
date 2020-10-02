@@ -17,15 +17,16 @@ router
     .delete(ctrlTeachers.teachersDeleteOne);
 
 //calendar
-/*router
+router
     .route('/teachers/:teacherid/calendar')
+    .get(crtlCalendar.calendarInfo)
     .post(crtlCalendar.calendarCreate);
 
 router
-    .route('/teachers/:teacherid:/calendar/:calendarid')
+    .route('/teachers/:teacherid/calendar/:calendarid')
     .get(crtlCalendar.calendarReadOne)
     .put(crtlCalendar.calendarUpdateOne)
-    .delete(crtlCalendar.calendarDeleteOne);*/
+    .delete(crtlCalendar.calendarDeleteOne);
 
 //reviews
 router

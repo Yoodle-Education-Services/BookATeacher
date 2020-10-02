@@ -1,94 +1,21 @@
+<app-page-header [content]="pageContent.header"></app-page-header>
 <div class="container">
-    <div class="card" *ngFor="let teacher of teachers">
+    <!--<div class="mx-auto">
+    <app-page-header [content]="pageContent.header"></app-page-header>
+    </div>-->
+    <div class="card shadow-sm bg-white rounded" *ngFor="let teacher of teachers">
         <div class="imgBox">
-            <a href="/teachers/5f5d2eb7eede026498a7ab58"><img src="../../assets/images/etty-fidele-VNYCIbZju0o-unsplash.jpg"></a> 
+            <img src="{{teacher.imageURL}}"> 
         </div>
         <div class="details">
             <div class="content">
-                <h2>{{teacher.name}}<br><span>English Teacher</span></h2>  
-                <br>
-               <small> 
-                <i class="fas fa-thumbs-up"></i>&nbsp;
-                <i class="fas fa-thumbs-up"></i>&nbsp;
-                <i class="fas fa-thumbs-up"></i>&nbsp;
-                <i class="fas fa-thumbs-up"></i>&nbsp;
-                <i class="fas fa-thumbs-up"></i>
-               </small>
-
+               <h2>{{teacher.name}}<br><span>{{teacher.payRate}}</span></h2>  
+               <app-rating-thumbs [rating]="teacher.rating"></app-rating-thumbs>
                <br>
-                <a href="#">Read More</a>
-            </div>
-        </div>
-    </div>
-    <div class="card">
-        <div class="imgBox">
-            <img src="../../assets/images/christina-wocintechchat-com-c-mgSuxqpzA-unsplash.jpg"> 
-        </div>
-        <div class="details">
-            <div class="content">
-                <h2>Chrissy Kim<br><span>History Teacher</span></h2>
-
-                <!--<br>
-                <span class="badge badge-pill" style="background-color: brown">High School</span> 
-                <span class="badge badge-pill" style="background-color: brown">High School</span>
-                <span class="badge badge-pill" style="background-color: brown">High School</span>
-                <span class="badge badge-pill" style="background-color: brown">High School</span>
-                <br>-->
-                <small> 
-                 <i class="fas fa-thumbs-up"></i>&nbsp;
-                 <i class="fas fa-thumbs-up"></i>&nbsp;
-                 <i class="fas fa-thumbs-up"></i>&nbsp;
-                 <i class="fas fa-thumbs-up"></i>&nbsp;
-                 <i class="fas fa-thumbs-up"></i> 
-                </small>
- 
-                <br>
-                <a href="#">Read More</a>
-            </div>
-        </div>
-    </div>
-    <div class="card">
-        <div class="imgBox">
-            <img src="../../assets/images/eye-for-ebony-aZzXKGcyWqk-unsplash (1).jpg"> 
-        </div>
-        <div class="details">
-            <div class="content">
-                <h2>Victoria Brown<br><span>French Teacher</span></h2>
-                <br>
-               <small> 
-                <i class="fas fa-thumbs-up"></i>&nbsp;
-                <i class="fas fa-thumbs-up"></i>&nbsp;
-                <i class="fas fa-thumbs-up"></i>&nbsp;
-                <i class="fas fa-thumbs-up"></i>&nbsp;
-                <i class="fas fa-thumbs-up"></i>
-               </small>
-
                <br>
-                <a href="#">Read More</a>
+                <a routerLink="/teachers/{{teacher._id}}">Read More</a> &nbsp; 
+                <a routerLink="/teachers/{{teacher._id}}/calendar">Book Now</a>
             </div>
         </div>
     </div>
-
-    <div class="card">
-        <div class="imgBox">
-            <img src="../../assets/images/sergio-de-paula-c_GmwfHBDzk-unsplash (1).jpg"> 
-        </div>
-        <div class="details">
-            <div class="content">
-                <h2>Jesus Lopez<br><span>Geometry Teacher</span></h2>
-                <br>
-                <small> 
-                 <i class="fas fa-thumbs-up"></i>&nbsp;
-                 <i class="fas fa-thumbs-up"></i>&nbsp;
-                 <i class="fas fa-thumbs-up"></i>&nbsp;
-                 <i class="fas fa-thumbs-up"></i>&nbsp;
-                 <i class="fas fa-thumbs-up"></i>
-                </small>
- 
-                <br>
-                <a href="#">Read More</a>
-            </div>
-        </div>
-    </div>
-
 </div>

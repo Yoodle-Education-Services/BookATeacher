@@ -9,7 +9,14 @@ export class ResourcesComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
+
+  public pageContent = {
+    header: {
+      title: 'Available Resources',
+      strapline: 'Below are available resources that may be beneficial for you and your children during the pandemic.'
+    }
+  };
 
 }
